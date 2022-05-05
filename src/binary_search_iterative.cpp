@@ -15,11 +15,11 @@ namespace assignment {
     int left = 0;
     int right = arr.size() - 1;
 
-    while (left < right) {
+    while (left <= right) {
       int middle = (right + left) / 2;
       if (arr[middle] == search_elem) {
         return middle;
-      } else if (arr[middle] < search_elem) {
+      } else if (arr[middle] > search_elem) {
         right = middle - 1;
       } else {
         left = middle + 1;

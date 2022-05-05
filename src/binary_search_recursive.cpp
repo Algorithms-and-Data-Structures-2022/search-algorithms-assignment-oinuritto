@@ -26,13 +26,13 @@ namespace assignment {
     int mid = start + (stop - start) / 2;
     if (arr[mid] == search_elem) {
       return mid;
-    } else if (arr[mid] < search_elem) {
-      search(arr, search_elem, start, mid - 1);
+    } else if (arr[mid] > search_elem) {
+      return search(arr, search_elem, start, mid - 1);
     } else {
-      search(arr, search_elem, mid + 1, stop);
+      return search(arr, search_elem, mid + 1, stop);
     }
 
-    return std::nullopt;
+
   }
 
 }  // namespace assignment
